@@ -1,0 +1,92 @@
+[
+  {
+    "id": " 2m_ltng",
+    "label": "Recent Strikes",
+    "queryType": "sample",
+    "imageUrl": "https://s3.amazonaws.com/uber-static/kepler.gl/sample/earthquakes.png",
+    "description": "Last 2 minutes of recent strikes",
+    "size": 54936,
+    "dataUrl": "http://localhost:5000/data/test.csv",
+    "configUrl": "http://localhost:5000/data/lightning-config.json"
+  },
+  {
+    "id": "6h_ltng",
+    "label": "6h Strike Data",
+    "queryType": "sample",
+    "imageUrl": "https://s3.amazonaws.com/uber-static/kepler.gl/sample/nyctrips.png",
+    "description": "",
+    "size": 97986,
+    "dataUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/nyctrips/data.csv",
+    "configUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/nyctrips/config.json"
+  },
+  {
+    "id": "12h_ltng",
+    "label": "12h Strike Data",
+    "queryType": "sample",
+    "imageUrl": "https://s3.amazonaws.com/uber-static/kepler.gl/sample/sfcontour.png",
+    "description": "Elevation contours of San Francisco mainland and Treasure Island/Yerba Island.",
+    "size": 13598,
+    "dataUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/sfcontour/data.json",
+    "configUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/sfcontour/config.json"
+  },
+  {
+    "id": "18h_ltng",
+    "label": "18h Lightning",
+    "queryType": "sample",
+    "imageUrl": "https://s3.amazonaws.com/uber-static/kepler.gl/sample/nyc_census.png",
+    "description": "This dataset contains the 2010 Census tract population data of NYC.",
+    "size": 2166,
+    "dataUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/nyc_census/data.json",
+    "configUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/nyc_census/config.json"
+  },
+  {
+    "id": "24h_ltng",
+    "label": "24h Lightning",
+    "queryType": "sample",
+    "imageUrl": "https://s3.amazonaws.com/uber-static/kepler.gl/sample/sftrees.png",
+    "description": "A 3d hexbin density map showing every single streets in San Francisco",
+    "size": 65499,
+    "dataUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/sftrees/data.csv",
+    "configUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/sftrees/config.json"
+  },
+  {
+    "id": "30h_ltng",
+    "label": "30h Lightning",
+    "queryType": "sample",
+    "imageUrl": "https://s3.amazonaws.com/uber-static/kepler.gl/sample/ukcommute.png",
+    "description": "A origin destination map using 3d arcs to show commute patterns of England and Wales residence",
+    "size": 679643,
+    "dataUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/ukcommute/data.csv",
+    "configUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/ukcommute/config.json"
+  },
+  {
+    "id": "36h_ltng",
+    "label": "36h Lightning",
+    "queryType": "sample",
+    "imageUrl": "https://s3.amazonaws.com/uber-static/kepler.gl/sample/la_assessorparcels.png",
+    "description": "Map showing new homes valued over $2,000,000 built in Los Angeles county since 2006",
+    "size": 284554,
+    "dataUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/la_assessorparcels/data.csv",
+    "configUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/la_assessorparcels/config.json"
+  },
+  {
+    "id": "42h_ltng",
+    "label": "42h Lightning",
+    "queryType": "sample",
+    "imageUrl": "https://s3.amazonaws.com/uber-static/kepler.gl/sample/movement-pittsburgh.png",
+    "description": "Pittsburgh travel times before and during heavy inclement weather conditions",
+    "size": 793,
+    "dataUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/movement_pittsburgh/data.csv",
+    "configUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/movement_pittsburgh/config.json"
+  },
+  {
+    "id": "48h_ltng",
+    "label": "48h Lightning",
+    "queryType": "sample",
+    "imageUrl": "https://s3.amazonaws.com/uber-static/kepler.gl/sample/counties-unemployment.png",
+    "description": "2017 Labor force information for U.S. Counties",
+    "size": 3220,
+    "dataUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/county_unemployment/data.geojson",
+    "configUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/county_unemployment/config.json"
+  }
+]

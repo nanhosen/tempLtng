@@ -1,0 +1,129 @@
+{
+  "version": "v1",
+  "config": {
+    "visState": {
+      "filters": [
+        {
+          "dataId": "my_data",
+          "id": "gy0hg5a8d",
+          "name": "strikes__timestamp",
+          "type": "timeRange",
+          "value": [
+            1528156801000,
+            1528243200000
+          ],
+          "enlarged": true,
+          "plotType": "histogram",
+          "yAxis": {
+            "name": "strikes__current",
+            "type": "integer"
+          }
+        }
+      ],
+      "layers": [
+        {
+          "id": "7k3zo7i",
+          "type": "point",
+          "config": {
+            "dataId": "my_data",
+            "label": "strikes",
+            "color": [
+              147,
+              18,
+              154
+            ],
+            "columns": {
+              "lat": "strikes__latitude",
+              "lng": "strikes__longitude",
+              "altitude": null
+            },
+            "isVisible": true,
+            "visConfig": {
+              "radius": 10,
+              "fixedRadius": false,
+              "opacity": 0.8,
+              "outline": true,
+              "thickness": 3,
+              "colorRange": {
+                "name": "ColorBrewer Set1-3",
+                "type": "qualitative",
+                "category": "ColorBrewer",
+                "colors": [
+                  "#377eb8",
+                  "#e41a1c",
+                  "#4daf4a"
+                ],
+                "reversed": false
+              },
+              "radiusRange": [
+                0,
+                50
+              ],
+              "hi-precision": false
+            }
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "strikes__polarity",
+              "type": "string"
+            },
+            "colorScale": "ordinal",
+            "sizeField": {
+              "name": "strikes__current",
+              "type": "integer"
+            },
+            "sizeScale": "sqrt"
+          }
+        }
+      ],
+      "interactionConfig": {
+        "tooltip": {
+          "fieldsToShow": {
+            "my_data": [
+              "strikes__current",
+              "strikes__polarity",
+              "strikes__time_stamp"
+            ]
+          },
+          "enabled": true
+        },
+        "brush": {
+          "size": 0.5,
+          "enabled": false
+        }
+      },
+      "layerBlending": "normal",
+      "splitMaps": []
+    },
+    "mapState": {
+      "bearing": 0,
+      "dragRotate": false,
+      "latitude": 38.337339648066276,
+      "longitude": -101.83308784839834,
+      "pitch": 0,
+      "zoom": 3.7856985540732833,
+      "isSplit": false
+    },
+    "mapStyle": {
+      "styleType": "0.eh3llfo4squ",
+      "topLayerGroups": {},
+      "visibleLayerGroups": {
+        "border": true,
+        "label": true,
+        "road": true,
+        "building": true,
+        "water": true,
+        "land": true
+      },
+      "mapStyles": {
+        "0.eh3llfo4squ": {
+          "accessToken": null,
+          "custom": true,
+          "id": "0.eh3llfo4squ",
+          "label": "Outdoors",
+          "url": "mapbox://styles/rtippetts/cjidgw23t060c2rpc028i4jko"
+        }
+      }
+    }
+  }
+}
