@@ -1,23 +1,13 @@
 [
   {
-    "id": " 2m_ltng",
-    "label": "Recent Strikes",
-    "queryType": "sample",
-    "imageUrl": "https://s3.amazonaws.com/uber-static/kepler.gl/sample/earthquakes.png",
-    "description": "Last 2 minutes of recent strikes",
-    "size": 54936,
-    "dataUrl": "http://localhost:5000/data/test.csv",
-    "configUrl": "http://localhost:5000/data/lightning-config.json"
-  },
-  {
     "id": "6h_ltng",
     "label": "6h Strike Data",
     "queryType": "sample",
     "imageUrl": "https://s3.amazonaws.com/uber-static/kepler.gl/sample/nyctrips.png",
     "description": "",
     "size": 97986,
-    "dataUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/nyctrips/data.csv",
-    "configUrl": "https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/nyctrips/config.json"
+    "dataUrl": "http://localhost:5000/data/6h_ltng.csv",
+    "configUrl": "http://localhost:5000/data/6h_ltng.json"
   },
   {
     "id": "12h_ltng",

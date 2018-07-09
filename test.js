@@ -1,35 +1,68 @@
-const axios = require('axios')
+
+
+
+// async function getAll(array) {
+//   array.map( async function (curr) {
+//     // console.log(curr)
+//       await getData(curr)
+
+    
+//   })
+// }
+
+// getAll(hrAr)
+
+
+//  async function getAll() {
+//   await getData(6) 
+//   await getData(12)
+//   await getData(24)
+// }
+
+// getAll()
+
+
+async function getData(hours,hours1) {
 const fs = require('fs')
 const Path = require('path')
+const axios = require('axios')
 const jsonStream = require('JSONStream')
-// const ost = require('object-stream-tools')
 const es = require('event-stream')
 const Json2csvTransform = require('json2csv').Transform
-const jg = require('json-to-geo')
+// const ost = require('object-stream-tools')
+// const jg = require('json-to-geo')
 
 const fields = ['TimeStamp', 'Longitude', 'Latitude', 'Current', 'icon']
 const opts = { fields }
 const transformOpts = { highWaterMark: 16384, encoding: 'utf-8' }
 const json2csv = new Json2csvTransform(opts, transformOpts)
 
+const msHour =  60000 * 60;
+// const hours = 12; 
+var hrAr = [6,12]
 
-async function getData() {
+// const end = new Date().toISOString()
+const end = new Date((new Date().getTime()) - (hours1 * msHour)).toISOString().slice(0,23);
+// const endLen = end.length
+const start = new Date((new Date().getTime()) - (hours * msHour)).toISOString().slice(0,23);
+console.log(end,start)
   console.time('apiTime')
+  console.log(start,end)
   const api = 'https://lightningapi.nifc.gov/api/strike?'
-  const start = `2018-07-08T12:00:01`
-  const end = `2018-07-08T18:00:01`
+
   const url = `${api}startTime=${start}&endTime=${end}`
-	const path = Path.resolve(__dirname, './data/test.csv')
+  console.log(url)
+  const path = Path.resolve(__dirname, `./data/${hours}h_ltng.csv`)
   try {
-  	const response = await axios({
-  		method: 'GET',
-  		url,
-  		responseType: 'stream',
-  		headers: { 
-  			'Authorization': 'Basic bGlnaHRuaW5nOlN0ciFrZURAdGE=', 
-  			'Accept': 'application/json' 
-  		} 
-  	})
+    const response = await axios({
+      method: 'GET',
+      url,
+      responseType: 'stream',
+      headers: { 
+        'Authorization': 'Basic bGlnaHRuaW5nOlN0ciFrZURAdGE=', 
+        'Accept': 'application/json' 
+      } 
+    })
 
     response.data
       .pipe(jsonStream.parse('strikes.*'))
@@ -52,8 +85,8 @@ async function getData() {
     // return a promise and resolve when download finishes
     return new Promise((resolve, reject) => {
       response.data.on('end', () => {
-      	console.log('success')
-      	console.timeEnd('apiTime')
+        console.log('success')
+        console.timeEnd('apiTime')
         resolve()
       })
       response.data.on('error', () => {
@@ -68,4 +101,18 @@ async function getData() {
 
 }
 
-getData()
+// var array = [6,12,18,22,28,34,40,46,54,60,66,72]
+// array.map((curr,i) => {
+//   var second = i*6
+//   getData(curr,second)
+// })
+var [x,n] = [0,6]
+while (n<=72){
+  var second = x*6
+  getData(n,second)
+  x=x+1
+  n=n+6
+}
+
+// getData(6)
+// getData(12)
